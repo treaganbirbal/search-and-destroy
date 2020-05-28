@@ -4,8 +4,10 @@
 const binarySearch = (array, target) => {
 	let front = 0
 	let back = array.length - 1
+	// console.log(front, back)
 	while(front <= back){
-	  let mid = Math.floor(front+back / 2)
+	  let mid = Math.ceil((front+back) / 2)
+	  console.log('mid', mid)
 		if(target === array[mid]){
 			return true;
 		} else if(target < array[mid]){
@@ -18,7 +20,7 @@ const binarySearch = (array, target) => {
 };
 
 let data = [1, 3, 5, 7, 9, 11]
-console.log(binarySearch(data))
+// console.log(binarySearch(data))
 /*
 	EXTRA CREDIT:
 
